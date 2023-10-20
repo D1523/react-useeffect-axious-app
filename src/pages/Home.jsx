@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import AddTutorial from "./AddTutorial"
-import TutorialList from "./TutorialList"
+import AddTutorial from "../components/AddTutorial"
+import TutorialList from "../components/TutorialList"
 import axios from "axios"
 
 const Home = () => {
@@ -29,13 +29,10 @@ const Home = () => {
 
   return (
     <>
-<AddTutorial/>
-<TutorialList/>
+      <AddTutorial getTutorials={getTutorials} />
+      <TutorialList tutorials={tutorials} getTutorials={getTutorials} />
     </>
   )
 }
 
 export default Home
-
-// <AddTutorial getTutorials={getTutorials} />
-//<TutorialList tutorials={tutorials} getTutorials={getTutorials} />
